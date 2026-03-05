@@ -1,135 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VetraSense - High-fidelity Clinical Decision Support (CDS) Ecosystem solving the Silent Patient problem across the biological spectrum.">
-    <meta name="keywords" content="Veterinary CDS, VetraSense, Clinical Decision Support, Veterinary Pharmacology, IV fluid protocols">
-    <title>VetraSense | Advanced Clinical Decision Support Ecosystem</title>
-    <style>
-        :root {
-            --primary-color: #004b87;
-            --secondary-color: #00a8cc;
-            --accent-color: #ffb703;
-            --text-dark: #333;
-            --text-light: #f4f4f9;
-        }
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
-        .hero {
-            background: linear-gradient(135deg, #004b87 0%, #00a8cc 100%);
-            color: white;
-            padding: 5rem 5%;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-            opacity: 0.9;
-        }
-        .cta-button {
-            background-color: var(--accent-color);
-            color: var(--text-dark);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #e0a100;
-        }
-        .features {
-            padding: 4rem 5%;
-            background-color: #f9f9f9;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--secondary-color);
-        }
-        .feature-card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 2rem 5%;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VetraSense | Veterinary Laboratory Cognizance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      background: url('background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+      color: #4db8ff;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease 0.3s;
+    }
+    section {
+      padding: 60px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 60px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    section h2 {
+      color: #4db8ff;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #e6e6e6;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .cta a {
+      background: #4db8ff;
+      color: #000;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+    .cta a:hover {
+      background: #3399ff;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 0.9em;
+      color: #999999;
+    }
+    /* Active state for animations */
+    .active {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <!-- App Logo -->
+    <img src="logo.png" alt="VetraSense Logo">
+    <h1>VetraSense</h1>
+    <p>Veterinary Laboratory Cognizance</p>
+  </header>
 
-    <header>
-        <h1>VetraSense</h1>
-        <a href="#contact" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Request Demo</a>
-    </header>
+  <section>
+    <h2>About VetraSense</h2>
+    <p>
+      VetraSense represents the rare intersection of High-Performance Computing and Advanced Biological Informatics. 
+      It is the bridge between raw laboratory entropy and definitive clinical cognizance. Unlike conventional apps that 
+      stop at data entry, VetraSense is a digital consciousness for the modern veterinarian.
+    </p>
+    <p>
+      This is not just another "medical app"—it is a high-fidelity Clinical Decision Support (CDS) Ecosystem engineered 
+      to solve the Silent Patient problem. While human medicine focuses on a single species, VetraSense operates across 
+      a multi-dimensional biological spectrum, unifying disparate physiological data into a singular, actionable 
+      intelligence stream.
+    </p>
+    <p>
+      Use VetraSense daily to unlock insights that go beyond observation, transforming uncertainty into clarity. 
+      The more you engage, the more powerful its intelligence becomes—yet its full capabilities remain a mystery until 
+      you experience them firsthand.
+    </p>
+    <div class="cta">
+      <a href="#">Get Started</a>
+    </div>
+  </section>
 
-    <section class="hero">
-        <h2>Solving the "Silent Patient" Problem</h2>
-        <p>Not just a medical app. A high-fidelity Clinical Decision Support (CDS) Ecosystem operating across a multi-dimensional biological spectrum, unifying disparate physiological data into a singular, actionable intelligence stream.</p>
-        <a href="#features" class="cta-button">Explore the Ecosystem</a>
-    </section>
+  <footer>
+    &copy; 2026 VetraSense. All rights reserved.
+  </footer>
 
-    <section id="features" class="features">
-        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Integrated Treatment Pipeline</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Automated Fluid & Nutrition</h3>
-                <p>Automatically generates IV fluid protocols with precise electrolyte correction sequences. Delivers evidence-based nutritional strategies auto-adjusted for lactation stage, metabolic load, body condition, and regional regulatory compliance.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Advanced Pharmacological Calculator</h3>
-                <p>Spans hundreds of drugs with dosing auto-adjusted for renal and hepatic function. Ensures maximum patient safety through rigorous, real-time contraindication checks.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Antimicrobial Stewardship</h3>
-                <p>Stay entirely compliant with the latest regulatory bans and guidelines. Our engine cascades findings to ensure your practice remains at the forefront of responsible, legal, and effective antimicrobial use.</p>
-            </div>
-        </div>
-    </section>
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.2 });
 
-    <footer id="contact">
-        <h2>Ready to transform your practice?</h2>
-        <p>Join the future of veterinary intelligence today.</p>
-        <p>&copy; 2026 VetraSense Ecosystem. All rights reserved.</p>
-    </footer>
-
+    document.querySelectorAll('header h1, header p, section').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
